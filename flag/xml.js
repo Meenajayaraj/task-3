@@ -4,4 +4,10 @@ const xml =new XMLHttpRequest();
 xml.open("GET",URL);
 xml.send();
 
-xml.onreadystatechange 
+xml.onreadystatechange = () =>
+{
+    console.log(xml.readystate);
+};
+xml.onload = () => {
+    console.log(JSON.parse(xml.response));
+};
