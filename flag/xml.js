@@ -22,3 +22,4 @@ xml.responseType = "json";
    console.log("Sub Region : "+country.subregion);
    console.log("Population : "+country.population);
           });
+        }
