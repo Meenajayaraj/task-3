@@ -12,7 +12,7 @@ const getregion = () => {
     
   xhr.send();
   }
-  getUSDollar();
+  getregion();
   
   function getData (data){
     data.forEach ((country) => {
