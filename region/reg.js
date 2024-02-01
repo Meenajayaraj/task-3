@@ -1,19 +1,18 @@
-const URL = "https://restcountries.com/v3.1/all";
-
-const xml =new XMLHttpRequest();
-xml.open("GET",URL);
-xml.responseType = "json";
+const getregion = () => {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://restcountries.com/v3.1/all", true);
   
-{
-  xml.onload = () => {
-    const data = xml.response;
-    //const datas = data;
+    xhr.responseType = "json";
+  
+  
+  xhr.onload = () => {
+    const data = xhr.response;
     getData(data);
      };
     
-  xml.send();
+  xhr.send();
   }
-  getcountry();
+  getUSDollar();
   
   function getData (data){
     data.forEach ((country) => {
@@ -21,4 +20,5 @@ xml.responseType = "json";
    console.log ("Region : "+country.region);
    console.log("Sub Region : "+country.subregion);
    console.log("Population : "+country.population);
-          })};
+          });
+  }  
