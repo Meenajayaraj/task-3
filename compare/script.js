@@ -1,7 +1,7 @@
 let object1 = {
     name: 'Person1',
-    age: 5
-    country:'india'
+    age: 5,
+    country:'india',
   };
       
   let object2 = {
