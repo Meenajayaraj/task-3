@@ -13,7 +13,7 @@ xml.responseType = "json";
     
   xml.send();
   }
-  getUSDollar();
+  getcountry();
   
   function getData (data){
     data.forEach ((country) => {
