@@ -1,11 +1,15 @@
-let obj1=
-{
-Name : "person1",
-age : 5,
-};
-let obj2=
-{
-    age : 5,
-    Name : "person1",
-};
-console.log(Object.is(obj1,obj2));
+let object1 = {
+    name: 'Person1',
+    age: 5
+    country:'india'
+  };
+      
+  let object2 = {
+    age: 5,
+    country:'india',
+    name: 'Person1',
+  };
+      
+  JSON.stringify(object1) === JSON.stringify(object2)
+      
+  _.isEqual(object1, object2)
