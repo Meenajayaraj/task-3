@@ -1,24 +1,17 @@
-const getRegion = () =>
-{
-    const xhr = new XMLHttpRequest();
+ const xhr = new XMLHttpRequest();
     const URL = "https://restcountries.com/v3.1/all";
     xhr.open("GET",URL);
-    xhr.responseType = "json";
+    //xhr.responseType = "json";
+    xhr.send();
+
 }
-xhr.onload = () =>{
-    const data = xhr.response;
-    getData(data);
+
+xhr.onload=()=>{
+   for(let rcf of (JSON.parse(xhr.response))){
+    console.log("NAME :" ,rcf.name.common);
+    console.log("REGION :" ,rcf.region);
+    console.log("SUBREGION :" ,rcf.subregion);
+    console.log("POPULATION :" ,rcf.population);
+   }
 };
-xhr.send();
-getRegion();
-
-function getData(data){
-    data.foreach((country) => {
-        console.log("Name:"+country.name.common);
-        console.log("Region:"+country.region);
-        console.log("Sub Region:"+country.subregion);
-        console.log("Population:"+country.population);   
-
-        
-    });
 }
