@@ -4,7 +4,7 @@
     xhr.responseType = "json";
     xhr.send();
 
-}
+};
 xhr.onload=()=>{
    for(let reg of (JSON.parse(xhr.response))){
     console.log("NAME :" ,reg.name.common);
@@ -13,4 +13,4 @@ xhr.onload=()=>{
     console.log("POPULATION :" ,reg.population);
    }
 };
-}
+};
